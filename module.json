@@ -3,7 +3,7 @@
   "title": "PF2E Automated Auras",
   "description": "A module for automating the effects of certain auras within the pathfinder second edition game system",
   "author": "Griff4218",
-  "version": "0.5",
+  "version": "0.7",
   "minimumCoreVersion": "9",
   "compatibleCoreVersion": "9",
   "system": [
