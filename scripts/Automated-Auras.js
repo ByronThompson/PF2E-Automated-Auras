@@ -13,7 +13,7 @@ Hooks.once('socketlib.ready', () =>{
 
 function handleItemCreate(document, updateData, socket){
     if(document.type != "effect") return;
-
+    if(document.data.data.rules[0] == null) return;
     if(document.data.data.rules[0].key ?? "no" !== "aura") return;
 
     let sourceID = document.id;
@@ -40,7 +40,7 @@ function handleTokenUpdate(document, updateData, socket) {
 
 function handleItemDelete(document, updateData, socket){
     if(document.type != "effect") return;
-
+    if(document.data.data.rules[0] == null) return;
     if(document.data.data.rules[0].key != "aura") return;
 
     Hooks.callAll('deleteAura', document);
