@@ -16,7 +16,7 @@ function handleItemCreate(document, updateData, socket){
     if(document.type != "effect") return;
     console.log("Automated auras | Item is Effect")
     if(document.data.data.rules[0] == null) return;
-    console.log("Automated auras | Effect has rule")
+    console.log(document.data.data.rules[0].key)
     if(document.data.data.rules[0].key ?? "no" !== "aura") return;
     console.log("Automated auras | effect is aura")
 
