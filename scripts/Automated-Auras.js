@@ -12,9 +12,13 @@ Hooks.once('socketlib.ready', () =>{
 })
 
 function handleItemCreate(document, updateData, socket){
+    console.log("Automated auras | Handling Item Create")
     if(document.type != "effect") return;
+    console.log("Automated auras | Item is Effect")
     if(document.data.data.rules[0] == null) return;
+    console.log("Automated auras | Effect has rule")
     if(document.data.data.rules[0].key ?? "no" !== "aura") return;
+    console.log("Automated auras | effect is aura")
 
     let sourceID = document.id;
     let effectID = document.data.data.rules[0].effect;
